@@ -7,7 +7,7 @@ CompareLength <- function(one, two) {
   one.length <- nchar(one)
   two.length <- nchar(two)
   difference <- one.length - two.length
-  print(paste("The difference in length is", difference * -1))
+  print(paste("The difference in length is", abs(difference)))
   return(difference)
 }
 
@@ -20,9 +20,9 @@ CompareLength("Kyle", "Kai")
 DescribeDifference <- function(one, two) {
   difference <- CompareLength(one, two)
   if(difference > 0) {
-    print(paste("Your first string is longer by", difference, "characters"))
+    print(paste("Your first string is longer by", abs(difference), "characters"))
   } else {
-    print(paste("Your second string is longer by", difference * -1, "characters"))
+    print(paste("Your second string is longer by", abs(difference), "characters"))
   }
 }
 
